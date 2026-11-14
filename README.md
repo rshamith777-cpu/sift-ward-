@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![SIFT-Ward Banner](./public/hero-preview.png)
+![SIFT-Ward Hero Banner](./public/hero-preview.png)
 
 ### *"Every sensor must earn its alert."*
 
@@ -38,9 +38,27 @@ The project’s governing philosophy is the **Sensor Value Gate**:
 
 ---
 
+## ⏱️ The Observation Gap: Silent Trajectories Between Rounds
+
+<div align="center">
+
+![The Observation Gap Visualizer](./public/observation-gap.png)
+
+</div>
+
+During routine 4-to-6 hour observation windows, episodic charting cannot reveal sub-acute physiological drift. The interactive visualizer contrasts what standard flowsheet records capture at discrete intervals (08:00, 12:00, 16:00, 20:00) against continuous acoustic respiratory rate drift and SpO₂ desaturation occurring inside the gap.
+
+---
+
 ## 🔄 End-to-End Application Clinical Flow
 
-The following diagram illustrates how signals originate at the patient bedside, pass through the **Signal Quality Filter**, and inform named clinicians under standard hospital operating procedures:
+<div align="center">
+
+![Clinical Human-in-the-Loop Pathway](./public/clinical-pathway.png)
+
+</div>
+
+The diagram below illustrates how signals originate at the patient bedside, pass through the **Signal Quality Filter**, and inform named clinicians under standard hospital operating procedures:
 
 ```mermaid
 flowchart TD
@@ -96,6 +114,12 @@ flowchart TD
 ---
 
 ## ⚖️ The "Sensor Value Gate": 4 Modality Comparison
+
+<div align="center">
+
+![Sensor Value Gate Architecture](./public/sensor-value-gate.png)
+
+</div>
 
 Before recommending any technology for ward adoption, SIFT-Ward compares four distinct monitoring modalities:
 
@@ -208,7 +232,10 @@ npm run preview
 ```
 sift-ward/
 ├── public/
-│   └── hero-preview.png          # High-resolution clinical hero artwork
+│   ├── hero-preview.png          # High-resolution clinical hero artwork
+│   ├── observation-gap.png       # 12-hour ward shift & gap corridor infographic
+│   ├── sensor-value-gate.png     # Multi-tier data stream & evaluation threshold
+│   └── clinical-pathway.png      # Bedside human-in-the-loop clinical workflow
 ├── src/
 │   ├── main.tsx                  # Application root
 │   ├── App.tsx                   # Master state engine & scroll story orchestration
